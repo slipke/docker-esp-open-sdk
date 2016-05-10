@@ -8,7 +8,19 @@ Docker image based on ubuntu:16.04, which simply installs the toolchain.
 
 ## How to use
 
-@TODO
+### Build
+
+Build with the following command:
+
+`docker build .`
+
+### Run
+
+```
+docker run --rm -it --privileged \
+  -v /yourdata:/data \
+  slipke/docker-esp-open-sdk
+```
 
 ## Credits
 

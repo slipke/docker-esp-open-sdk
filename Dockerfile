@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y \
 	sudo
 
 RUN useradd -d /home/espbuilder -m espbuilder && \
-	usermod -a -G dialout espbuilder && \
+	usermod -a -G dialout,staff espbuilder && \
 	mkdir -p /etc/sudoers.d && \
 	echo "espbuilder ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/espbuilder && \
 	chmod 0440 /etc/sudoers.d/espbuilder
